@@ -1,38 +1,357 @@
-.App {
+.container {
+  width: 37%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-container {
+  background: #fff;
+  padding: 20px;
+}
+
+.form-step h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-step p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-input {
+  width: 92%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 1%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button {
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  background-color: #664de5;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5636d3;
+}
+
+.usage-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+.usage-button {
+  min-width: 140px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.usage-button.active {
+  border-color: #664de5;
+  background: #f0f0ff;
+}
+
+.usage-button.active svg {
+  color: #664de5;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.entries table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.entries th,
+.entries td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.entries th {
+  background-color: #f5f5f5;
+}
+
+.entries button {
+  width: 100%;
+  margin: 3% 0;
+}
+
+.center-button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.entries {
+  overflow-x: auto;
+}
+
+.entries table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.entries th,
+.entries td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+input {
+  width: 75%;
+}
+
+
+.step-tracker {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.step-item {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.step-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ece9e9;
+  /* background-color: #ece9e9; */
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.step-circle.active {
+  background-color: #664de5;
+  color: #fff;
+}
+
+.step-line {
+  width: 50px;
+  height: 2px;
+  background-color: #ece9e9;
+  ;
+  transition: background-color 0.3s;
+}
+
+.step-line.active {
+  background-color: #664de5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+label {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.step-completed {
+  margin: auto;
+  text-align: center;
+}
+
+.step-completed svg {
+  width: 3em;
+  height: 3em;
+  justify-content: center;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.optional {
+  font-weight: normal;
+  color: #888;
+  margin-left: 4px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 8px;
+  background-color: #fff;
+  margin-top: 1%;
+}
+
+.input-prefix {
+  color: #555;
+  font-size: 14px;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.input-group {
+  background-color: lightgray;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.input-group span {
+  color: black;
+  padding: 0 2%;
+}
+
+.input-group input {
+  padding: 10px;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+
+  .entries table,
+  .entries thead,
+  .entries tbody,
+  .entries th,
+  .entries td,
+  .entries tr {
+    display: block;
+    width: 97%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    width: 100%;
+  }
+
+  .entries td {
+    position: relative;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .entries td::before {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .form-input {
+    width: 91%;
+  }
+
+  .entries {
+    width: 98%;
+  }
+
+  .usage-options {
+    width: 95%;
+  }
+
+  .usage-button {
+    flex: 1 1 100%;
+  }
+
+  .button {
+    width: 96%;
+    margin: 5px 0;
+  }
+
+  .form-step h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-step p {
+    font-size: 0.95rem;
+  }
+
+  .input-group {
+    width: 95%;
+  }
+
+  .input-group {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .form-step h2 {
+    font-size: 1.1rem;
+  }
+
+  .form-step p {
+    font-size: 0.85rem;
+  }
+
+  .form-input {
+    padding: 10px;
+    font-size: 0.95rem;
+    width: 87% !important;
+  }
+
+  .usage-button {
+    min-width: 10px;
   }
 }
