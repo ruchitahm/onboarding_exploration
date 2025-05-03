@@ -11,11 +11,11 @@ This is a responsive onboarding application inspired by the Dribbble (https://dr
 ## Steps to Run Locally
 - Clone the repository:
     Clone the repository to your local machine using the following command:
-    ### `git clone https://github.com/ruchitahm/task-dashboard.git`
+    ### `git clone https://github.com/ruchitahm/onboarding_exploration.git`
 
 - Install dependencies:
     Navigate to the project directory and install the necessary dependencies for the React app:
-    ### `cd task-dashboard`
+    ### `cd onboarding_exploration`
     ### `npm install`
 
 - Start the project:
